@@ -11,9 +11,10 @@
 
 ## MyTF-IDF:
 
-实现了初步的计算TF-IDF向量的功能,该方法基于统计和惩罚的机制对词汇的重要性进行划分,可以想象,当语料库较小的时候,这种词嵌入的方法会十分的糟糕!
+用全联接网络将“语料”训练,最后将对应的权重保存到相对路径下的“w.txt”文件下,还没有对保存后的权重
+矩阵做处理.
 
-(博客地址: https://blog.csdn.net/Laugh_xiaoao/article/details/103136858)
+(博客地址: https://blog.csdn.net/Laugh_xiaoao/article/details/102944177)
 
 ## Pytorch_RNN:
 
@@ -50,5 +51,4 @@
 
 博客我分成了几份来写,具体的地址如下:
 
-[HMM模型](https://blog.csdn.net/MaggicalQ/article/details/88980534)
-
+[HMM模型博客地址](https://blog.csdn.net/MaggicalQ/article/details/88980534)
