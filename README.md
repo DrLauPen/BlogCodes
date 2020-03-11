@@ -49,6 +49,9 @@
 
 该py.文件主要实现了大致的NER中模型包括HMM,CRF,CRF+LSTM,LSTM等,LSTM是借助于Pytorch实现的.
 
-博客我分成了几份来写,具体的地址如下:
+博客我分成了两份来写,具体的地址如下:
 
-[HMM模型博客地址](https://blog.csdn.net/MaggicalQ/article/details/88980534)
+(博客地址:https://blog.csdn.net/Laugh_xiaoao/article/details/104592504,
+
+博客地址:https://blog.csdn.net/Laugh_xiaoao/article/details/104805813)
+
