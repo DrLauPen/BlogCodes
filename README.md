@@ -1,16 +1,22 @@
 # BlogCodes
-## CSDN博客的代码
 
-### MyWord2Vec: 用全联接网络将“语料”训练,最后将对应的权重保存到相对路径下的“w.txt”文件下,还没有对保存后的权重
-矩阵做处理,主要是‘懒’.
+这个仓库主要保存的对应网页下的CSDN的代码,其中包括对应的原理和源码.
+
+## MyWord2Vec:
+
+用全联接网络将“语料”训练,最后将对应的权重保存到相对路径下的“w.txt”文件下,还没有对保存后的权重
+矩阵做处理
 
 (博客地址: https://blog.csdn.net/Laugh_xiaoao/article/details/102944177)
 
-### MyTF-IDF: 实现了初步的计算TF-IDF向量的功能,该方法基于统计和惩罚的机制对词汇的重要性进行划分,可以想象,当语料库较小的时候,这种词嵌入的方法会十分的糟糕!
+## MyTF-IDF:
+
+实现了初步的计算TF-IDF向量的功能,该方法基于统计和惩罚的机制对词汇的重要性进行划分,可以想象,当语料库较小的时候,这种词嵌入的方法会十分的糟糕!
 
 (博客地址: https://blog.csdn.net/Laugh_xiaoao/article/details/103136858)
 
-### Pytorch_RNN:
+## Pytorch_RNN:
+
 使用了CharRNN对于语句序列进行学习, 通过将诗句划分成一个个字(没有采用分词的原因是对于不等长序列的处理还不够纯熟,有待改进.)
 网络模型架构是一层Embedding层+GRU层+Relu层+输出层, 由于是采用的CharRNN所以, 每次输入RNN的batchsize都只能是1, seq_length 就是一句话中包含的字数, 
 
@@ -19,7 +25,8 @@
 
 (博客地址: https://blog.csdn.net/Laugh_xiaoao/article/details/103137601)
 
-### FiveChess:
+## FiveChess:
+
 用java实现的五子棋系统,algorithm包是基本的算法,除了level3的采用了决策树,另外两个没有使用,纯粹是为了当时课设使用的所需.
 考虑优化的代码的话,有两方面:
 
@@ -29,7 +36,19 @@
 
 (博客地址: https://blog.csdn.net/Laugh_xiaoao/article/details/103761624)
 
-### Pytorch_TextCNN:
+## Pytorch_TextCNN:
+
 用TextCNN实现的情感分类的小实验代码.
 
 (博客地址:https://blog.csdn.net/Laugh_xiaoao/article/details/103820784)
+
+
+
+## Pytorch_NER:
+
+该py.文件主要实现了大致的NER中模型包括HMM,CRF,CRF+LSTM,LSTM等,LSTM是借助于Pytorch实现的.
+
+博客我分成了几份来写,具体的地址如下:
+
+[HMM模型](https://blog.csdn.net/MaggicalQ/article/details/88980534)
+
