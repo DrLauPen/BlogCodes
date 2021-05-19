@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.travels.dao.PlaceDAO">
+        <!--查询所有的景点信息-->
+        <select id="findByProvinceIdPages" resultType="com.example.travels.entity.Place">
+            select *
+            from t_place
+            where provinceId = #{provinceId}
+            order by id
+            limit #{start},#{rows}
+        </select>
+
+        <!--查找某省份对应所有的景点-->
+        <select id="findByProvinceIdCounts" resultType="Integer">
+            select count(*)
+            from t_place
+            where provinceId=#{provinceId}
+        </select>
+
+        <!--保存对应的景点信息-->
+        <insert id="save" parameterType="com.example.travels.entity.Place" useGeneratedKeys="true" keyProperty="id">
+            insert into t_place values (#{id},#{name},#{picpath},#{hottime},#{hotticket},#{dimticket},#{placedes},#{provinceid})
+        </insert>
+
+        <delete id="delete" parameterType="String">
+            delete from t_place where id = #{id};
+        </delete>
+
+        <!--查找对应的景点信息-->
+        <select id="findOne" parameterType="String" resultType="com.example.travels.entity.Place">
+            select * from t_place where id = #{id};
+        </select>
+
+        <update id="update" parameterType="com.example.travels.entity.Place">
+            update t_place set
+                name=#{name},
+                hottime = #{hottime},
+                picpath = #{picpath},
+                hotticket = #{hotticket},
+                dimticket = #{dimticket},
+                placedes = #{placedes},
+                provinceid = #{provinceid}
+            where id = #{id}
+        </update>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.travels.dao.UserDAO">
+    <!--注册用户-->
+    <insert id="save" parameterType="com.example.travels.entity.User" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user values(#{id},#{username},#{password},#{email});
+    </insert>
+    
+    <select id="findByUsername"  parameterType="String" resultType="com.example.travels.entity.User">
+        select * from t_user where username = #{username};
+    </select>
+
+</mapper>
